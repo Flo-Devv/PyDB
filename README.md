@@ -24,7 +24,7 @@ An interactive web application is also available, providing a user-friendly inte
 To use PyDB in your Python project, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/your-username/pydb.git`
-2. Navigate to the project directory: `cd pydb`
+2. Navigate to the project directory: `cd PyDB`
 3. Install the required dependencies: `pip install -r requirements.txt`
 4. Import Pydb into your Python script:
 

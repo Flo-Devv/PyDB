@@ -21,6 +21,7 @@ class FileDeletionScheduler(threading.Thread):
         print('File deletion scheduler initialized.')
 
     def run(self):
+        os.makedirs(self.win.config['UPLOAD_FOLDER'], exist_ok=True)
         while True:
             with self.lock:
                 # if files in upload folder are not in the task list, delete them

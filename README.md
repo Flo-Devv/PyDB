@@ -1,7 +1,7 @@
 # PyDB
 *"Unlock the potential of your data with PyDB!"*
 
-![Pydb](https://github.com/Flo-Devv/PyDB/assets/129592338/b22bee4e-d464-4d66-9f4f-7ae37de332c7)
+![Pydb](<img width="732" alt="image" src="https://github.com/Flo-Devv/PyDB/assets/129592338/8cbe23d9-8e7f-4b64-9a26-2a4236ab2f00" draggable="false">)
 
 ## Introduction
 

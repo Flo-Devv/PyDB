@@ -1,0 +1,128 @@
+body {
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #313338;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        border-radius: 10px;
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(90deg);
+        border-radius: 100px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #212529;
+    border-radius: 10px;
+}
+
+.code-block {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    max-height: 50vh;
+    overflow-y: auto;
+    margin-bottom: 50px;
+    padding: 0;
+}
+
+.fixed-selection, #sbar, #messagebox, input[type="file"], #loader {
+    display: none;
+}
+
+.fixed-selection {
+    display: fixed;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(49, 51, 56, .9);
+    padding: 40px;
+}
+
+.selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+#file-lbl {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#url {
+    background: linear-gradient(to right, transparent, #212529);
+    border-color: #6C757D;
+    max-width: 600px;
+}
+
+#url:focus {
+    box-shadow: 0 0 0 0.2rem rgb(16, 172, 132, 0.25);
+}
+
+#sbar {
+    z-index: 0;
+    margin-top: 50px;
+    margin-inline: auto;
+    max-width: 600px;
+}
+
+#loader {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    border-radius: 10px;
+    background-color: rgba(49, 51, 56, .9);
+}
+
+#wheel-container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    background-color: #212529;
+    border-radius: 10px;
+    width: min(25vh, 25vw);
+    height: min(25vh, 25vw);
+    animation: rotate 1.5s ease-out alternate-reverse infinite;
+}
+
+#wheel {
+    width: 100%;
+}
+
+#ask_selection {
+    font-size: 50px;
+    font-weight: 600;
+    margin-block: 50px;
+    text-align: center;
+}
+
+#select, #lang {
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+#copy-btn {
+    position: absolute;
+    cursor: pointer;
+    top: 25px;
+    right: 40px;
+}

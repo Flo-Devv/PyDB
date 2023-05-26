@@ -121,6 +121,9 @@ def uploads(filename):
         abort(403)
     return send_from_directory(win.config['UPLOAD_FOLDER'], filename, as_attachment=True)
 
+@win.route('favicon.ico')
+def favicon():
+    return send_from_directory(path.join(win.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 @win.route('/info', methods=['POST'])
 def info():

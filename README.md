@@ -17,7 +17,7 @@ Pydb is a powerful Python library that allows you to seamlessly convert popular 
 
 ## Web Application
 
-An interactive web application is also available, providing a user-friendly interface to utilize the power of PyDB. Visit [website](https://www.example.com) to access the web application and explore its features.
+An interactive web application is also available, providing a user-friendly interface to utilize the power of PyDB. Visit [website](https://pydb-9cawl.ondigitalocean.app/) to access the web application and explore its features.
 
 ## Usage
 

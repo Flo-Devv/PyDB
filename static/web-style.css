@@ -57,6 +57,7 @@ body {
 }
 
 .fixed-selection {
+    z-index: 2;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -144,6 +145,16 @@ body {
     cursor: pointer;
     top: 25px;
     right: 40px;
+}
+
+#messagebox {
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: auto;
+    width: 66%;
 }
 
 #lang {

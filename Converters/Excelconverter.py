@@ -16,7 +16,8 @@ def dftoexcel(df:dict, file_path:str) -> None:
         for sheet in df:
             df[sheet].to_excel(writer, sheet_name=sheet, header=False, index=False)
         writer.close()
-    except Exception:
+    except Exception as e:
+        print(e)
         return 2
     return path.basename(file_path)
 
@@ -27,6 +28,5 @@ def exceltodf(path:str) -> DataFrame:
     return read_excel(path, sheet_name=None, header=None, index_col=None, engine='openpyxl')
 
 if __name__ == '__main__':
-    json = exceltodf('C:/Users/flori/Documents/Projets GitHub/PyDB/test/test.xlsx')
-    print(json)
-    print(dftoexcel(json))
+    df = exceltodf('C:/Users/flori/Documents/Projets GitHub/PyDB/test/test.xlsx')
+    print(dftoexcel(df, 'C:/Users/flori/Documents/Projets GitHub/PyDB/test/output.xlsx'))

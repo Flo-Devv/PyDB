@@ -3,6 +3,7 @@ Flask
 lxml
 pandas
 openpyxl
+XlsxWriter
 requests
 bs4
 gunicorn

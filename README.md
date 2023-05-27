@@ -39,7 +39,7 @@ from Converters import*
 df = htmltodf('input.html')
 
 # Example: Convert a SQLite table to a DataFrame
-df = sqlite_to_df('input.db')
+df = sqlitetodf('input.db')
 
 # Example: Convert a DataFrame to HTML
 html = dftohtml(df, **style)

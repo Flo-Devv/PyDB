@@ -129,7 +129,7 @@ def docs(query):
     doc = docs_dt.get(query)
     if doc:
         return render_template('docs.html', **doc)
-    abort(403)
+    abort(404)
 
 @win.route('/info', methods=['POST'])
 def info():

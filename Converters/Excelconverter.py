@@ -11,13 +11,14 @@ def dftoexcel(df:dict, file_path:str) -> None:
     '''
     if type(df) != dict:
         raise TypeError('df must be a dict of pandas DataFrame')
-    # try:
-    writer = ExcelWriter(file_path)
-    for sheet in df:
-        df[sheet].to_excel(writer, sheet_name=sheet)
-    writer.close()
-    # except Exception:
-    #     return 2
+    try:
+        writer = ExcelWriter(file_path)
+        for sheet in df:
+            df[sheet].to_excel(writer, sheet_name=sheet)
+        writer.close()
+    except Exception as e:
+        print(e)
+        return 2
     return path.basename(file_path)
 
 def exceltodf(path:str) -> DataFrame:

@@ -1,0 +1,10 @@
+{
+    "id": {
+        "doc_title": "What is your ID used for?",
+        "doc_content": "Your ID is used to secure the uploaded file during the conversion process. It ensures that only authorized users can access the files. \nThe result filename is also based on your ID for avoiding collisions with other users."
+    },
+    "file": {
+        "doc_title": "How many time are your files stored on the server?",
+        "doc_content": "Your files are stored on the server for a duration of 5 minutes, after which they are automatically deleted from the server."
+    }
+}

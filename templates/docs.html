@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Docs{% endblock %}
+
+{% block content %}
+
+<!-- home button filled white using boostrap icons -->
+<a href="/" class="btn btn-dark position-absolute top-0 start-0 m-3">
+    <i class="bi bi-house-fill fs-2"></i>
+    <span class="visually-hidden">Home</span>
+</a>
+
+<div class="d-flex align-items-center vh-100">
+    <div class="container text-justify">
+        <h1 class="display-3 mb-3 fw-semibold" style="color: #00AD5F">{{doc_title}}</h1>
+        <p class="mx-auto fs-6">{{doc_content}}</p>
+    </div>
+</div>
+{% endblock %}

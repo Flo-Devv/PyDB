@@ -20,6 +20,9 @@ uids = ['abcdefgh', '12345678', 'ABCDEFGH']
 with open('messages.json', 'r', encoding='utf-8') as file:
     messages_dt = load(file)
 
+with open('docs.json', 'r', encoding='utf-8') as file:
+    docs_dt = load(file)
+
 sched = FileDeletionScheduler(win=win, interval=300)
 sched.start()
 
@@ -121,6 +124,12 @@ def uploads(filename):
         abort(403)
     return send_from_directory(win.config['UPLOAD_FOLDER'], filename, as_attachment=True)
 
+@win.route('/docs/<query>')
+def docs(query):
+    doc = docs_dt.get(query)
+    if doc:
+        return render_template('docs.html', **doc)
+    abort(403)
 
 @win.route('/info', methods=['POST'])
 def info():

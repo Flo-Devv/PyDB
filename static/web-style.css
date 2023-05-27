@@ -34,12 +34,7 @@ body {
     padding: 0;
 }
 
-.fixed-selection, #sbar, #messagebox, input[type="file"], #loader {
-    display: none;
-}
-
 .fixed-selection {
-    display: fixed;
     position: fixed;
     left: 50%;
     top: 50%;
@@ -48,6 +43,7 @@ body {
     height: 100%;
     background-color: rgba(49, 51, 56, .9);
     padding: 40px;
+    overflow-y: auto;
 }
 
 .selection {
@@ -111,8 +107,8 @@ body {
 #ask_selection {
     font-size: 50px;
     font-weight: 600;
-    margin-block: 50px;
     text-align: center;
+    margin-bottom: 40px;
 }
 
 #select, #lang {
@@ -125,4 +121,8 @@ body {
     cursor: pointer;
     top: 25px;
     right: 40px;
+}
+
+.fixed-selection, #sbar, #messagebox, input[type="file"], #loader {
+    display: none;
 }

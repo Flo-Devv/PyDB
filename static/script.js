@@ -256,7 +256,7 @@ $(document).ready(function() {
     // On click a button with attribute id="select", set the lang_focus to the id of the button
     $(document).on('click', '#select', function() {
         lang_focus = $(this).children('span').attr('id');
-        $('.fixed-selection').show(400, 'swing');
+        $('.fixed-selection').show();
     });
 
     $(document).on('click', '#lang', function() { // Permet de savoir si le language de selection est lang1 ou lang2
@@ -273,7 +273,6 @@ $(document).ready(function() {
 
         $('#' + lang_focus).text(lang);
         $('#' + lang_focus).siblings('img').attr('src', img);
-        $('.fixed-selection').hide(400, 'swing');
 
         afterlangselection();
     }

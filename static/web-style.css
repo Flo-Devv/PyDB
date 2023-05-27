@@ -3,6 +3,7 @@ body {
     font-size: 15px;
     color: #ffffff;
     background-color: #313338;
+    user-select: none;
 }
 
 @keyframes rotate {
@@ -13,6 +14,26 @@ body {
     100% {
         transform: translate(-50%, -50%) rotate(90deg);
         border-radius: 100px;
+    }
+}
+
+@keyframes slide-cards {
+    0% {
+        transform: perspective(1000px) rotateY(120deg) rotateX(45deg);
+        opacity: 0;
+    }
+    100% {
+        transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -32,18 +53,20 @@ body {
     overflow-y: auto;
     margin-bottom: 50px;
     padding: 0;
+    user-select: text;
 }
 
 .fixed-selection {
     position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    transform-origin: center;
     background-color: rgba(49, 51, 56, .9);
     padding: 40px;
     overflow-y: auto;
+    animation: appear .5s;
 }
 
 .selection {
@@ -121,6 +144,10 @@ body {
     cursor: pointer;
     top: 25px;
     right: 40px;
+}
+
+#lang {
+    animation: slide-cards 1s cubic-bezier(.25,.1,.25,1);
 }
 
 .fixed-selection, #sbar, #messagebox, input[type="file"], #loader {
